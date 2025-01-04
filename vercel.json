@@ -1,18 +1,17 @@
 {
-    "version": 2,
-    "builds": [
-        {
-            "src": "aap/wsgi.py",
-            "use": "@ardnt/vercel-python-wsgi",
-            "config": {
-                "runtime": "python3.9"
-            }
-        }
-    ],
-    "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "aap/wsgi.py"
-        }
-    ]
+  "builds": [
+    {
+      "src": "aap/wsgi.py",
+      "use": "@vercel/python",
+      "config": {
+        "runtime": "python3.9"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "aap/wsgi.py"
+    }
+  ]
 }
